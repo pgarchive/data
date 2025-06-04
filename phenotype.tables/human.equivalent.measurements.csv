@@ -1,0 +1,52 @@
+ID,Trait,Measurement,Source,Closest UMLS Human Term in causalDB,UMLS code,Closest trait in causalDB,Closest EFO Human Term in GWAS catalog,EFO code,Closest UMLS Human Term in GWAS catalog,Closest UMLS code in GWAS catalog
+PTD00014,BodyMass_kg,56.7,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Body Weight,C0005910,Body Weight,Body Weight,EFO:0004338,Body Weight,C0005910
+PTD00002,Brain_mass,7.192934221,"J. B. Smaers (2021). ""The evolution of mammalian brain size""",Brain,C0006104,Intracranial volume,Intracranial volume,EFO:0004886,Brain*,C0006104*
+NotFound,Neonatal mass(g),3319,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Birth Weight,C0005612,Birth Weight,Birth Weight,EFO:0004344,Birth Weight,C0005612
+NotFound,Offspring per litter,1.01,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Multiple Birth Offspring,C0026753,Part of a multiple birth,,,,
+NotFound,Interbirth interval (days),1167,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Live Birth,C0481667,Number of live births (female),fertility measurement,EFO:0006923,Fertility,C0015895
+NotFound,Gestation (days),270,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.","Pregnancy, Prolonged",C0032993,Prolonged pregnancy,premature birth,EFO:0003917,Premature Birth,
+NotFound,Lactation (days),720,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Breast Feeding,C0006147,Breastfed as a baby,,,,
+NotFound,Age of female at first reproduction (years),19.5,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Live Birth,C0481667,Age at first live birth,age at first birth measurement,EFO:0009101,First Birth,C0016145
+NotFound,Maximum lifespan (years),105,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Longevity,C0023980,Parents' age at death / Longevity (living to age >=90),longevity,EFO:0004300,,
+NotFound,r_max (Maximal reproductive success),0.052,"Van Schaik and Isler (2012). ""Life history evolution in primates."" The Evolution of Primate Societies. Ch 10.",Live Birth,C0481667,Number of live births (female),fertility measurement,EFO:0006923,Fertility,C0015895
+PTD00200,Albumin,4.17,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Serum Albumin,C0036773,Serum albumin level,serum albumin measurement,EFO:0004535,Serum Albumin,C0036773
+PTD00211,Calcium,9.425,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Calcium,C0006675,Calcium,calcium measurement,EFO:0004838,Calcium,C0006675
+PTD00213,Cholesterol,208.325,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Cholesterol,C0008377,Total cholesterol,total cholesterol measurement,EFO:0004574,Cholesterol,C0008377
+PTD00237,Phosphorus,3.9,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Phosphorus,C0031705,Phosphorus,phosphorus measurement,EFO:0004861,Dietary Phosphorus,C0080014
+PTD00239,Potassium,4.1475,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Potassium,C0032821,Potassium,potassium measurement,EFO:0009283,Potassium,C0032821
+PTD00241,Ser.Glut.Oxaloacetic.Transamin.,22.175,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Aspartate Aminotransferases,C0004002,Aspartate aminotransferase levels,aspartate aminotransferase measurement,EFO:0004736,Aspartate Aminotransferases,C0004002
+PTD00242,Ser.Glut.Pyruvic.Transaminase,24.1,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Alanine Transaminase,C0001899,Alanine transaminase levels,serum alanine aminotransferase measurement,EFO:0004735,C0001899,Alanine transaminase levels
+PTD00244,Total.Protein,7.175,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00015,BodyMassMale_kg,62.4,https://www.pnas.org/content/112/24/7466/#fn-10,,,,,,,
+PTD00016,BodyMassFemale_kg,57.3,https://www.pnas.org/content/112/24/7466/#fn-10,,,,,,,
+PTD00028,MassDimorphism,1.14,https://anatomypubs.onlinelibrary.wiley.com/doi/full/10.1002/ar.23572,,,,,,,
+PTD00004,Social_organization,Multimale,"Peter M. Kappeler (2019). ""Evolutionary transitions toward pair living in nonhuman primates as stepping stones toward more complex societies""",Loneliness,C0023974,"Loneliness, isolation",social deprivation,EFO:0009696,,
+PTD00009,Mating_system,Polygynous/Monogamous,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",Sexual partners,C0036911,Lifetime number of sexual partners,,,,
+PTD00017,DielActivity,D,,Sleep,C0037313,Morning/evening person (chronotype),circadian rhythm,EFO:0004354,Circadian Rhythms,C0008810
+PTD00019,Locomotion,T,,,,,,,,
+PTD00018,TrophicGuild,Omnivore,,Diet,C0012155,Variation in diet,diet measurement,EFO:0008111,"Therapy, Diet",C0012159
+PTD00006,Paternal_care,Present,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",Father-Child Relations,C0015670,Number of children fathered (male),,,,
+PTD00007,Female_Ranging_patterns,Overlap,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",,,,,,,
+PTD00008,Infanticide,High,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",,,,,,,
+PTD00012,Weaning_prop,0.73,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",Breastfed as a baby,C0006147,,,,,
+PTD00013,Seasonal_breeders,No,"Christopher Opie (2013). ""Male infanticide leads to social monogamy in primates""",,,,,,,
+PTD00203,Alkaline.Phosphatase,105.5,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Alkaline Phosphatase,C0002059,Serum alkaline phosphatase levels,alkaline phosphatase measurement,EFO:0004533,,
+PTD00205,Basophils..,0.6275,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00212,Chloride,104,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Chlorides,C0008203,Chloride,chloride measurement,EFO:0009284,,
+PTD00221,Hematocrit,40.5,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Erythrocyte Indices,C0014779,Haematocrit percentage,hematocrit,EFO:0004348,,
+PTD00222,Hemoglobin,13.6,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Hemoglobin,C0019046,Hemoglobin levels,hemoglobin measurement,EFO:0004509,,
+PTD00223,Lactic.Dehydrogenase,271.75,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Lactate Dehydrogenases,C1260230,Lactate dehydrogenase,L lactate dehydrogenase measurement,EFO:0004808,,
+PTD00225,Lymphocytes..,31.25,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Lymphocyte Count,C0200635,Lymphocyte Count,lymphocyte count,EFO:0004587,,
+PTD00227,Magnesium,2.04,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Magnesium,C0024467,Magnesium,magnesium measurement,EFO:0004845,,
+PTD00231,Monocytes..,7.675,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,Monocytes,C0026473,Monocyte subset (CD11c-CD16-CD274+),,,,
+PTD00235,Neutrophil.Seg..,57.25,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00240,Red.Blood.Cells,4.4975,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00243,Sodium,140.475,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00245,Triglycerides,85.41,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00246,Uric.Acid,5.35,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00247,White.Blood.Cells,6.475,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00254,High.Density.Lipoprotein,56.27,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00255,Iron,85,https://onlinelibrary.wiley.com/doi/10.1111/acel.12402,,,,,,,
+PTD00003,Colour_vision,Trichromatic,https://www.sciencedirect.com/topics/engineering/human-color-vision,,,,,,,
+PTD00095,BasalMetabolicRate_ml_O2.h,12457,https://www-sciencedirect-com.sare.upf.edu/science/article/pii/S0047248408001577?via%3Dihub#aep-e-component-id17,,,,,,,
+PTD00096,RestingMetabolicRate_kcal.day,1400,https://www-sciencedirect-com.sare.upf.edu/science/article/pii/S1095643303001326,,,,,,,
