@@ -45,7 +45,8 @@ For a detailed explanation of each file, please refer to the official PGA docume
 
 ## License
 
-This dataset is released under the terms specified in the `LICENSE` file.
+This repository is distributed under the **GNU General Public License v3.0**.  
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
