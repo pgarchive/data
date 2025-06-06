@@ -6,7 +6,7 @@ The PGA dataset is part of the project *Valenzuela et al., 2025*, and provides a
 
 ## Repository Structure
 
-├── genetic.information
+`├── genetic.information
 │   ├── ALL_RER_CONVERGE_UNIQUE_MAR23.txt
 │   └── CAAS_FINAL_MAR23.tab
 ├── LICENSE
@@ -20,7 +20,7 @@ The PGA dataset is part of the project *Valenzuela et al., 2025*, and provides a
 │   ├── nhp.phenomic.dataset.csv
 │   ├── trait.data.sources.csv
 │   └── traits.redundancy.csv
-└── README.md
+└── README.md`
 
 ### `genetic.information/`
 
