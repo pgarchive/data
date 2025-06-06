@@ -5,13 +5,12 @@ This repository contains core data files for the **Primate Genome-phenome Archiv
 The PGA dataset is part of the project *Valenzuela et al., 2025*, and provides a foundation for evolutionary, biomedical, and comparative analyses linking genotype to phenotype across primates.
 
 ## Repository Structure
-
-`├── genetic.information
+```
+├── genetic.information
 │   ├── ALL_RER_CONVERGE_UNIQUE_MAR23.txt
 │   └── CAAS_FINAL_MAR23.tab
 ├── LICENSE
 ├── phenotype.tables
-│   ├── ~$PERVISOR EVALUATION_FORM.docx
 │   ├── caas.discovery.groups.csv
 │   ├── caas.results.csv
 │   ├── human.equivalent.measurements.csv
@@ -20,7 +19,8 @@ The PGA dataset is part of the project *Valenzuela et al., 2025*, and provides a
 │   ├── nhp.phenomic.dataset.csv
 │   ├── trait.data.sources.csv
 │   └── traits.redundancy.csv
-└── README.md`
+└── README.md
+```
 
 ### `genetic.information/`
 
