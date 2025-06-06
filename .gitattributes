@@ -1,2 +1,2 @@
-genetic.information/*.txt filter=lfs diff=lfs merge=lfs -text
-genetic.information/*.tab filter=lfs diff=lfs merge=lfs -text
+genetic.information/ALL_RER_CONVERGE_UNIQUE_MAR23.txt filter=lfs diff=lfs merge=lfs -text
+genetic.information/CAAS_FINAL_MAR23.tab filter=lfs diff=lfs merge=lfs -text
