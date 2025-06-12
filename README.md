@@ -40,8 +40,7 @@ This folder includes phenotype tables describing ~230 traits measured across ~22
 
 For a detailed explanation of each file, please refer to the official PGA documentation:
 
-📄 [Download the PDF documentation](https://example.com/pga_documentation.pdf)  
-📚 [Read the online docs](https://pga-dataset.readthedocs.io)
+📄 [Download the PDF documentation](https://github.com/pgarchive/data/blob/main/Documentation.pdf)  
 
 ## License
 
