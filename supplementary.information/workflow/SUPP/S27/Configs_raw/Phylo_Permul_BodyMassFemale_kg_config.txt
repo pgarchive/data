@@ -1,0 +1,6 @@
+Aotus_trivirgatus	0
+Aotus_griseimembra	1
+Gorilla_gorilla	0
+Homo_sapiens	1
+Pongo_abelii	0
+Pongo_pygmaeus	0

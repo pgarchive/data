@@ -1,0 +1,11 @@
+Carlito_syrichta	1
+Tarsius_bancanus	0
+Gorilla_beringei	0
+Gorilla_gorilla	0
+Pan_paniscus	0
+Pan_troglodytes	0
+Pongo_abelii	1
+Pongo_pygmaeus	1
+Tarsius_lariang	0
+Tarsius_wallacei	0
+Homo_sapiens	0

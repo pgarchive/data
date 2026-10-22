@@ -1,0 +1,4 @@
+Daubentonia_madagascariensis	0
+Microcebus_murinus	0
+Cheirogaleus_medius	1
+Nycticebus_coucang	1

@@ -1,0 +1,11 @@
+Callithrix_jacchus	1
+Gorilla_gorilla	0
+Leontopithecus_chrysomelas	1
+Leontopithecus_rosalia	1
+Loris_tardigradus	1
+Macaca_nigra	0
+Nycticebus_pygmaeus	1
+Pan_paniscus	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Homo_sapiens	0

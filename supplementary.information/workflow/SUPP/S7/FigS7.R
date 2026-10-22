@@ -1,0 +1,153 @@
+######################################
+##COMPONENTS STUDY FOR TRAITS GROUPS##
+###, BASED ON MERGED MULTIPLE GROUPS##
+###IN THE ANALYSIS OF CATEGORIES #####
+###AND VARIABLES #####################
+######################################
+
+library(ggplot2)
+library(gridExtra)
+library(tibble)
+library(data.table)
+library(ggrepel)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(reshape2)
+library(dendextend)
+library(ComplexHeatmap)
+library("factoextra")
+library("circlize")
+library("RColorBrewer")
+library(ggnewscale)
+library(scales)
+library(cowplot)
+library(ggdendro)
+library(viridis)
+library(cowplot)
+library(FactoMineR)
+library(missMDA)
+library(psych)
+library(network)
+library(ape)
+library(ggtree)
+library(randomcoloR)
+library(devtools)
+library(phytools)
+library(fastDummies)
+options(scipen=0)
+
+
+
+#A) READ LAST TRAITS FILE and metadata
+
+all_traits <- read.csv("../../Figures/Fig1/PRIMATES_PHENOMIC_DATASET.tsv", header=T, sep = "\t")
+
+#Now let's bind the Group info
+
+
+#B) SELECT DESIRED SPECIES (sequenced_ones)
+
+
+primates_palette <- readRDS("../../Figures/Fig1/primate_families_palette.rds")
+seq_species <- read.csv("../../Figures/Fig1/names_FINAL.txt",
+                        sep = "\t", header = TRUE)
+colnames(seq_species)<- c("Tree_Species", "Genome_species", "Trait_species")
+covered_species_all <- as.character(seq_species$Trait_species[!is.na(seq_species$Tree_Species)])
+covered_species <- as.character(covered_species_all[!is.na(covered_species_all)])
+sequenced_traits <- all_traits[which(all_traits$SpeciesBROAD %in% covered_species),]
+
+groups_list <- strsplit(as.character(sequenced_traits$GroupName), "_")
+groups <- c()
+for(i in 1:length(groups_list)){
+  group <- paste(groups_list[[i]][1], "_", groups_list[[i]][2], sep="")
+  groups[i] <- group}
+groups
+sequenced_traits <- cbind(sequenced_traits, groups)
+sequenced_traits <- sequenced_traits %>%
+  mutate_at(vars(`IUCN_ER`), funs(case_when(
+    . %in% c("5", "4", "3") ~ "1", 
+    . %in% c("2", "1") ~ "0")))
+
+
+#read redundant measurements
+
+redundant <- read.csv("Redundant_measurements.tsv", header=FALSE, sep = "\t")
+
+#D) BINARIZE THE MATRIX
+
+binarized_traits <- sequenced_traits[,-which(colnames(sequenced_traits) %in% c("SpeciesBROAD",  "GroupName",
+                                                                               "groups") |
+                                               colnames(sequenced_traits) %in% redundant$V1)] %>%
+  mutate_all(funs(ifelse(is.na(.), 0, 1)))
+
+
+#E) STUDY THE CLUSTERS OF HOMOGENEITY AND CONSISTENCY
+
+#binarized_traits <- cbind(binarized_traits, groups)
+
+rownames(binarized_traits) <- sequenced_traits[,1]
+
+
+##############################################
+#A) ANALYSIS OF CORRELATIONS WITH CLUSTERS###
+##############################################
+
+#SELECT SPECIES AND TRAITS OF INTEREST
+#for cluster 7 (brain), need to low down the nº of correlating species
+
+coverage_traits_clustered <- read.csv("../../Figures/Fig1/Traits_clusters_FINAL_JAN23.tsv", sep = "\t")
+
+traits_clust <- coverage_traits_clustered[which(coverage_traits_clustered$Cluster ==6),]
+
+data_clust <- binarized_traits[,which(colnames(binarized_traits) %in% traits_clust$Trait)]
+
+num_data_clust <- sapply(data_clust, as.numeric)
+rownames(num_data_clust) <- rownames(data_clust)
+##Subset as usual
+best_species_clust <- rownames(num_data_clust[which(rowSums(num_data_clust) >= 0.90*ncol(num_data_clust)),])
+best_species_clust
+all_traits_clust <- binarized_traits[which(rownames(binarized_traits) %in% best_species_clust),]
+
+
+#Cluster6 SEXUAL DIMORPHISM[8] - SPECIES WITH >90% coverafe of traits in cluster | NO MISS-IMPUTE
+
+
+
+#totals <- colSums(sapply(all_traits_clust, as.numeric))
+best_traits_clust <- all_traits_clust[, which(colSums(all_traits_clust) >= 0.90*nrow(all_traits_clust))]
+best_traits_clust <- colnames(best_traits_clust)
+
+#MULTIVARIATE ANALYSIS
+trues <- sequenced_traits$SpeciesBROAD %in% best_species_clust
+#length(trues[trues==TRUE])
+
+selected_subset <- sequenced_traits[which(sequenced_traits$SpeciesBROAD %in% best_species_clust),
+                                    which(colnames(sequenced_traits) %in% best_traits_clust)] 
+
+rownames(selected_subset) <- sequenced_traits$SpeciesBROAD[sequenced_traits$SpeciesBROAD %in% best_species_clust]
+selected_subset <- selected_subset[,which(!colnames(selected_subset) %in% as.character(redundant$V1))]
+
+
+
+library(missMDA)
+no_missing <- selected_subset %>% drop_na()
+#imputed <- imputeFAMD(selected_subset)
+
+res.famd <- FAMD(no_missing) #cluster6 | cluster7 | cluster 8
+#res.famd <- FAMD(selected_subset, tab.disj = imputed$tab.disj)
+#res.famd_raw <- FAMD(selected_subset)
+
+nrow(selected_subset)
+#sequenced_traits[,1]
+fviz_famd_var(res.famd, "quali.var", col.var = "contrib", 
+              gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07")
+)
+options(ggrepel.max.overlaps = Inf)
+
+p1 <- fviz_famd_var(res.famd, "quanti.var", col.var = "contrib", 
+              gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+              repel = TRUE)
+
+
+saveRDS(p1, "FigureS7")

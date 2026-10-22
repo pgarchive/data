@@ -1,0 +1,11 @@
+Alouatta_seniculus	1
+Papio_anubis	0
+Cercopithecus_mitis	0
+Erythrocebus_patas	0
+Nasalis_larvatus	0
+Gorilla_gorilla	0
+Gorilla_beringei	0
+Pan_paniscus	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Nycticebus_coucang	1

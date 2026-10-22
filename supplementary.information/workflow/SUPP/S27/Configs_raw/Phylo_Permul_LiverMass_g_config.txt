@@ -1,0 +1,6 @@
+Cebuella_pygmaea	1
+Leontopithecus_chrysomelas	0
+Saguinus_oedipus	0
+Eulemur_fulvus	0
+Eulemur_macaco	1
+Varecia_rubra	0

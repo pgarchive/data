@@ -1,0 +1,6 @@
+Saguinus_oedipus	1
+Papio_anubis	0
+Cercopithecus_ascanius	0
+Piliocolobus_badius	0
+Hylobates_lar	0
+Propithecus_verreauxi	1

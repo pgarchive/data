@@ -1,0 +1,57 @@
+Trait	Measurement	Source
+BodyMass_kg	56.7	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Body.mass..g.	56700	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Body_mass	11.08214255	J. B. Smaers (2021). "The evolution of mammalian brain size"
+Brain_mass	7.192934221	J. B. Smaers (2021). "The evolution of mammalian brain size"
+Neonatal.mass..g.	3319	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+LitterSz	1.01	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Offspring.per.litter	1.01	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Interbirth.interval..days.	1167	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Gestation..days.	270	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Lactation..days.	720	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Age.of.female.at.first.reproduction..y.	19.5	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Maximum.lifespan..y.	105	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Maximum.possible.reproductive.success.under.optimal.conditions..rmax.	0.052	Van Schaik and Isler (2012). "Life history evolution in primates." The Evolution of Primate Societies. Ch 10.
+Albumin	4.17	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Calcium	9.425	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Cholesterol	208.325	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Phosphorus	3.9	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Potassium	4.1475	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Ser.Glut.Oxaloacetic.Transamin.	22.175	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Ser.Glut.Pyruvic.Transaminase	24.1	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Total.Protein	7.175	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+BodyMassMale_kg	62.4	https://www.pnas.org/content/112/24/7466/#fn-10
+BodyMassFemale_kg	57.3	https://www.pnas.org/content/112/24/7466/#fn-10
+MassDimorphism	1.14	https://anatomypubs.onlinelibrary.wiley.com/doi/full/10.1002/ar.23572
+Social_organization	Multimale	Peter M. Kappeler (2019). "Evolutionary transitions toward pair living in nonhuman primates as stepping stones toward more complex societies"
+Mating_system	Polygynous/Monogamous	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+DielActivity	D	Source search
+Locomotion	T	Source search
+TrophicGuild	Omnivore	Source search
+Paternal_care	Present	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+Female_Ranging_patterns	Overlap	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+Infanticide	High	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+Weaning_prop	0.73	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+Seasonal_breeders	No	Christopher Opie (2013). "Male infanticide leads to social monogamy in primates"
+Alkaline.Phosphatase	105.5	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Basophils..	0.6275	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Chloride	104	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Hematocrit	40.5	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Hemoglobin	13.6	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Lactic.Dehydrogenase	271.75	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Lymphocytes..	31.25	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Magnesium	2.04	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Monocytes..	7.675	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Neutrophil.Seg..	57.25	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Red.Blood.Cells	4.4975	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Sodium	140.475	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Triglycerides	85.41	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Uric.Acid	5.35	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+White.Blood.Cells	6.475	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+High.Density.Lipoprotein	56.27	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Iron	85	https://onlinelibrary.wiley.com/doi/10.1111/acel.12402
+Prehensile_tail	No	
+Relative_tail_length	0	
+Colour_vision	Trichromatic	https://www.sciencedirect.com/topics/engineering/human-color-vision
+BasalMetabolicRate_ml_O2.h	12457	https://www-sciencedirect-com.sare.upf.edu/science/article/pii/S0047248408001577?via%3Dihub#aep-e-component-id17
+RestingMetabolicRate_kcal.day	1400.0	https://www-sciencedirect-com.sare.upf.edu/science/article/pii/S1095643303001326

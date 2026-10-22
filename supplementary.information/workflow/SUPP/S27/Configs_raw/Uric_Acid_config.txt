@@ -1,0 +1,10 @@
+Daubentonia_madagascariensis	0
+Eulemur_albifrons	0
+Eulemur_macaco	0
+Eulemur_mongoz	0
+Eulemur_rubriventer	0
+Eulemur_sanfordi	0
+Galago_moholi	1
+Macaca_mulatta	1
+Varecia_rubra	0
+Varecia_variegata	0

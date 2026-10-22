@@ -1,0 +1,11 @@
+Daubentonia_madagascariensis	1
+Microcebus_murinus	0
+Cheirogaleus_medius	0
+Lemur_catta	0
+Eulemur_sanfordi	1
+Eulemur_collaris	0
+Eulemur_rufus	0
+Eulemur_fulvus	0
+Eulemur_flavifrons	0
+Eulemur_mongoz	0
+Varecia_variegata	0

@@ -1,0 +1,15 @@
+Cebus_albifrons	0
+Cebus_olivaceus	1
+Cebus_unicolor	0
+Galago_moholi	0
+Galago_senegalensis	0
+Galagoides_demidovii	1
+Otolemur_crassicaudatus	0
+Otolemur_garnettii	1
+Saimiri_cassiquiarensis	0
+Saimiri_macrodon	1
+Saimiri_oerstedii	1
+Saimiri_sciureus	1
+Saimiri_ustus	1
+Sapajus_apella	0
+Sapajus_macrocephalus	1

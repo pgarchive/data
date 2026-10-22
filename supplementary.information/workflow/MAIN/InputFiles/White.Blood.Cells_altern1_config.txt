@@ -1,0 +1,7 @@
+Pan_paniscus	1
+Pan_troglodytes	1
+Pongo_pygmaeus	1
+Saguinus_oedipus	1
+Callithrix_jacchus	0
+Leontopithecus_chrysomelas	0
+Homo_sapiens	0

@@ -1,0 +1,15 @@
+Cercopithecus_cephus	0
+Cercopithecus_mona	0
+Cercopithecus_neglectus	0
+Gorilla_gorilla	0
+Macaca_fuscata	1
+Macaca_nigra	1
+Pan_paniscus	1
+Pan_troglodytes	1
+Papio_anubis	1
+Papio_cynocephalus	1
+Papio_hamadryas	1
+Pongo_pygmaeus	0
+Presbytis_comata	0
+Semnopithecus_vetulus	0
+Trachypithecus_pileatus	0

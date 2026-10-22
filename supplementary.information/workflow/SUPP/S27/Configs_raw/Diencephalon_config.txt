@@ -1,0 +1,13 @@
+Papio_anubis	0
+Macaca_mulatta	0
+Cercopithecus_mitis	0
+Cercopithecus_ascanius	0
+Erythrocebus_patas	0
+Piliocolobus_badius	0
+Nasalis_larvatus	0
+Gorilla_gorilla	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Propithecus_verreauxi	1
+Indri_indri	1
+Nycticebus_coucang	1

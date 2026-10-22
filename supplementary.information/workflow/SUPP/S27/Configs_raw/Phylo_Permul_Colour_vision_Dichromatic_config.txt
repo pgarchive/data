@@ -1,0 +1,16 @@
+Avahi_laniger	1
+Avahi_peyrierasi	1
+Indri_indri	0
+Loris_lydekkerianus	0
+Loris_tardigradus	0
+Nycticebus_bengalensis	1
+Nycticebus_coucang	1
+Nycticebus_pygmaeus	1
+Perodicticus_potto	1
+Propithecus_coquereli	0
+Propithecus_coronatus	0
+Propithecus_diadema	0
+Propithecus_edwardsi	0
+Propithecus_perrieri	0
+Propithecus_tattersalli	0
+Propithecus_verreauxi	0

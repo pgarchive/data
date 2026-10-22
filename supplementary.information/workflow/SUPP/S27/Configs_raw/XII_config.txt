@@ -1,0 +1,10 @@
+Papio_anubis	0
+Cercopithecus_mitis	0
+Cercopithecus_ascanius	0
+Erythrocebus_patas	0
+Piliocolobus_badius	0
+Pygathrix_nemaeus	0
+Nasalis_larvatus	0
+Pan_paniscus	0
+Lepilemur_ruficaudatus	1
+Perodicticus_potto	1

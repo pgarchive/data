@@ -1,0 +1,12 @@
+Papio_anubis	0
+Macaca_mulatta	0
+Cercopithecus_ascanius	0
+Erythrocebus_patas	0
+Piliocolobus_badius	0
+Pygathrix_nemaeus	0
+Nasalis_larvatus	0
+Pan_troglodytes	0
+Cheirogaleus_major	1
+Cheirogaleus_medius	1
+Nycticebus_coucang	1
+Perodicticus_potto	1

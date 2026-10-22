@@ -1,0 +1,11 @@
+Hylobates_lar	0
+Leontocebus_fuscicolis	0
+Leontocebus_nigricollis	0
+Leontopithecus_rosalia	1
+Mico_argentatus	1
+Mico_humeralifer	0
+Nomascus_concolor	1
+Saguinus_geoffroyi	0
+Saguinus_midas	0
+Saguinus_mystax	0
+Saguinus_oedipus	0

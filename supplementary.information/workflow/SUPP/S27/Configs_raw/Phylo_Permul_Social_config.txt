@@ -1,0 +1,4 @@
+Loris_lydekkerianus	1
+Nycticebus_coucang	0
+Pan_troglodytes	1
+Pongo_pygmaeus	0

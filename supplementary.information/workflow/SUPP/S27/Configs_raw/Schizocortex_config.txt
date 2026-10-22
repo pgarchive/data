@@ -1,0 +1,10 @@
+Papio_anubis	0
+Macaca_mulatta	0
+Cercopithecus_mitis	0
+Erythrocebus_patas	0
+Pygathrix_nemaeus	0
+Nasalis_larvatus	0
+Gorilla_gorilla	0
+Pan_troglodytes	0
+Daubentonia_madagascariensis	1
+Indri_indri	1

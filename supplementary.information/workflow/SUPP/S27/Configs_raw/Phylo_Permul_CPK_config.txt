@@ -1,0 +1,5 @@
+Callithrix_jacchus	0
+Cebuella_pygmaea	0
+Eulemur_albifrons	1
+Leontopithecus_rosalia	1
+Varecia_rubra	0

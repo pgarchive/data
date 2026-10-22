@@ -1,0 +1,10 @@
+Daubentonia_madagascariensis	1
+Lemur_catta	0
+Eulemur_collaris	0
+Eulemur_rufus	0
+Eulemur_fulvus	0
+Eulemur_coronatus	0
+Eulemur_macaco	0
+Eulemur_rubriventer	0
+Galago_moholi	1
+Otolemur_garnettii	0

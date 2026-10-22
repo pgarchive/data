@@ -1,0 +1,11 @@
+Lemur_catta	0
+Eulemur_albifrons	1
+Eulemur_rufus	0
+Eulemur_fulvus	0
+Eulemur_flavifrons	0
+Eulemur_macaco	0
+Varecia_rubra	0
+Varecia_variegata	0
+Nycticebus_coucang	0
+Nycticebus_pygmaeus	1
+Perodicticus_potto	1

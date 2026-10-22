@@ -1,0 +1,17 @@
+Eulemur_albifrons	0
+Eulemur_collaris	0
+Eulemur_coronatus	0
+Eulemur_flavifrons	0
+Eulemur_fulvus	0
+Eulemur_macaco	0
+Eulemur_mongoz	0
+Eulemur_rubriventer	0
+Eulemur_sanfordi	0
+Gorilla_gorilla	1
+Lemur_catta	0
+Macaca_fascicularis	0
+Macaca_nigra	0
+Nycticebus_pygmaeus	1
+Pan_paniscus	1
+Varecia_rubra	0
+Varecia_variegata	0

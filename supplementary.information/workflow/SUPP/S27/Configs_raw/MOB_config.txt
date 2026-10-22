@@ -1,0 +1,13 @@
+Macaca_mulatta	0
+Cercopithecus_mitis	0
+Cercopithecus_ascanius	0
+Erythrocebus_patas	0
+Piliocolobus_badius	0
+Pygathrix_nemaeus	0
+Nasalis_larvatus	0
+Gorilla_gorilla	0
+Pan_troglodytes	0
+Carlito_syrichta	1
+Galago_senegalensis	1
+Otolemur_crassicaudatus	1
+Galagoides_demidovii	1

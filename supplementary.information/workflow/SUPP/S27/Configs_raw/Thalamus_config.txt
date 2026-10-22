@@ -1,0 +1,8 @@
+Papio_anubis	0
+Cercopithecus_ascanius	0
+Piliocolobus_badius	0
+Gorilla_beringei	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Propithecus_verreauxi	1
+Eulemur_fulvus	1

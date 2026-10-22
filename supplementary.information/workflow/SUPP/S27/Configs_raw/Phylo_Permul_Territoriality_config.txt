@@ -1,0 +1,4 @@
+Cebus_olivaceus	0
+Indri_indri	0
+Propithecus_verreauxi	1
+Saimiri_oerstedii	1

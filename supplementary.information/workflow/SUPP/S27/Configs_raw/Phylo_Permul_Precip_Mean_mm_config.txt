@@ -1,0 +1,9 @@
+Callithrix_jacchus	0
+Hoolock_hoolock	0
+Hylobates_muelleri	1
+Leontopithecus_chrysomelas	0
+Leontopithecus_rosalia	0
+Nomascus_concolor	0
+Saguinus_bicolor	0
+Saguinus_geoffroyi	1
+Saguinus_oedipus	0

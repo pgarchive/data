@@ -1,0 +1,17 @@
+Lagothrix_lagotricha	1
+Alouatta_caraya	0
+Alouatta_palliata	0
+Theropithecus_gelada	0
+Macaca_nemestrina	0
+Erythrocebus_patas	0
+Pygathrix_nemaeus	0
+Trachypithecus_obscurus	0
+Trachypithecus_cristatus	0
+Semnopithecus_vetulus	0
+Semnopithecus_entellus	0
+Presbytis_comata	0
+Homo_sapiens	1
+Pan_paniscus	1
+Pan_troglodytes	1
+Pongo_abelii	1
+Pongo_pygmaeus	1
