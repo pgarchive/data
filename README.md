@@ -51,6 +51,6 @@ See the [LICENSE](LICENSE) file for details.
 
 *Part of the project "Valenzuela et al., 2025".*
 
-## Supplementary materials for reviewers
+## Supplementary materials
 
-The [supplementary materials](supplementary.information/) contain the supplementary datasets and figure-analysis scripts. Details on file organization, available datasets, execution limitations, and the complete file inventory with MD5 checksums are provided in the information for reviewers ([Markdown](supplementary.information/information.for.reviewers.md) | [PDF](supplementary.information/information.for.reviewers.pdf)).
+The [supplementary materials](supplementary.information/) contain the supplementary datasets and figure-analysis scripts. Details on file organization, available datasets, execution limitations, and the complete file inventory with MD5 checksums are provided in the code and data guide ([Markdown](supplementary.information/code.and.data.guide.md) | [PDF](supplementary.information/code.and.data.guide.pdf)).

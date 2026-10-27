@@ -1,4 +1,4 @@
-# Information for reviewers
+# Code and data guide
 
 ## Primate Genome-phenome Archive: supplementary datasets and figure workflows
 
@@ -81,7 +81,7 @@ The affected files and delimiter lines are:
 - In `workflow/SUPP/S6,9,12,15,18,21_MERGED/`, `S6_MERGED.R`, `S12_MERGED.R`, `S15_MERGED.R` and `S18_MERGED.R`: lines 263 and 274, around a `TestCor` / `ApplyFdrCor()` block.
 - In the same directory, `S9_MERGED.R`: lines 262 and 273, around the corresponding `TestCor` block. `S21_MERGED.R` is not among the seven files with this error.
 
-These delimiters have been retained because it is not established whether the enclosed code was intended to run. Removing only the delimiters would activate the enclosed analyses; commenting every line of the block would leave it inactive. Neither interpretation has been adopted in the supplied seven files. Reviewers can inspect the code, but execution requires clarification and an explicit correction.
+These delimiters have been retained because it is not established whether the enclosed code was intended to run. Removing only the delimiters would activate the enclosed analyses; commenting every line of the block would leave it inactive. Neither interpretation has been adopted in the supplied seven files. Readers can inspect the code, but execution requires clarification and an explicit correction.
 
 A separate trailing `+` after `saveRDS(p2, "FigureS26")` was removed from `workflow/SUPP/S26/FigS26.R`. That script now passes R's syntax parser. A fresh syntax check of all 69 files found 62 that parse and the seven failures listed above. Passing the parser does not establish that inputs, packages, object definitions or scientific results are correct. No other script corrections are represented by this guide.
 
