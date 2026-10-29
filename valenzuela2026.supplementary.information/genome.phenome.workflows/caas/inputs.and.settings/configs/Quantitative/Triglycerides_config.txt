@@ -1,0 +1,4 @@
+Gorilla_gorilla	1
+Macaca_arctoides	0
+Propithecus_coquereli	0
+Propithecus_tattersalli	1

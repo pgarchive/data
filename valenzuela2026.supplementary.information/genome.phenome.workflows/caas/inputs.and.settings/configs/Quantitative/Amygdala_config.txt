@@ -1,0 +1,7 @@
+Cercopithecus_ascanius	1
+Piliocolobus_badius	0
+Gorilla_gorilla	0
+Gorilla_beringei	0
+Pan_paniscus	0
+Pongo_pygmaeus	0
+Daubentonia_madagascariensis	1

@@ -1,0 +1,10 @@
+Eulemur_albifrons	0
+Eulemur_collaris	0
+Eulemur_coronatus	0
+Eulemur_fulvus	0
+Eulemur_macaco	0
+Eulemur_sanfordi	0
+Gorilla_gorilla	1
+Hapalemur_griseus	0
+Varecia_rubra	1
+Homo_sapiens	0

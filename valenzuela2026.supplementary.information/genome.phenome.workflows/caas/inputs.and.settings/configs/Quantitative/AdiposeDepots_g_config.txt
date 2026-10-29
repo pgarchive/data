@@ -1,0 +1,8 @@
+Papio_hamadryas	0
+Theropithecus_gelada	0
+Macaca_nigra	0
+Chlorocebus_pygerythrus	0
+Colobus_guereza	0
+Semnopithecus_vetulus	1
+Eulemur_macaco	0
+Varecia_rubra	1

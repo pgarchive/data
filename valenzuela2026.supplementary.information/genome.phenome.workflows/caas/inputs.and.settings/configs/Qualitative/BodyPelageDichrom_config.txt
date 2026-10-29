@@ -1,0 +1,10 @@
+Alouatta_caraya	1
+Alouatta_palliata	0
+Alouatta_seniculus	0
+Ateles_geoffroyi	0
+Ateles_paniscus	0
+Hylobates_klossii	0
+Hylobates_lar	0
+Hylobates_muelleri	0
+Lagothrix_lagotricha	0
+Nomascus_concolor	1

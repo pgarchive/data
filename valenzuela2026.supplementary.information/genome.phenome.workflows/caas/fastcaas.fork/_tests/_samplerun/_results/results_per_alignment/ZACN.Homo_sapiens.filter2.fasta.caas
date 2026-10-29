@@ -1,0 +1,12 @@
+ZACN	BodyMass_kg_permulation.cfg	5	P/L	0.234	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	14	F/L	0.213	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	24	Q/ER	0.395	scenario2	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	29	T/P	0.237	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	39	V/FL	0.398	scenario2	4	3	0	0	0	0	Gorilla_gorilla,Macaca_thibetana,Mandrillus_leucophaeus,Gorilla_beringei	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	63	Q/EK	0.127	scenario2	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	79	M/V	0.231	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	98	T/AN	0.169	scenario2	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	103	R/Q	0.172	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	166	H/Q	0.189	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	261	G/A	0.209	scenario1	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	
+ZACN	BodyMass_kg_permulation.cfg	332	Q/HR	0.195	scenario2	4	3	0	0	0	0	Gorilla_gorilla,Gorilla_beringei,Macaca_thibetana,Mandrillus_leucophaeus	Callibella_humilis,Avahi_peyrierasi,Aotus_griseimembra	

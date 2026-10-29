@@ -1,0 +1,6 @@
+Alouatta_palliata	0
+Ateles_geoffroyi	1
+Hylobates_lar	1
+Nomascus_concolor	0
+Nomascus_gabriellae	0
+Nomascus_siki	0

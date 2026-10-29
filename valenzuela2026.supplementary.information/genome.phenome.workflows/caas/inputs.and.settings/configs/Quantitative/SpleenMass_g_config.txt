@@ -1,0 +1,9 @@
+Mandrillus_sphinx	0
+Theropithecus_gelada	0
+Macaca_arctoides	0
+Macaca_nigra	1
+Chlorocebus_pygerythrus	0
+Colobus_guereza	0
+Semnopithecus_vetulus	0
+Eulemur_fulvus	0
+Eulemur_macaco	1

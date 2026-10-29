@@ -1,0 +1,473 @@
+#!/usr/bin/env python3
+
+'''                                                          
+,------. ,---.   ,---. ,--------. ,-----.  ,---.    ,---.   ,---.   
+|  .---'/  O  \ '   .-''--.  .--''  .--./ /  O  \  /  O  \ '   .-'  
+|  `--,|  .-.  |`.  `-.   |  |   |  |    |  .-.  ||  .-.  |`.  `-.  
+|  |`  |  | |  |.-'    |  |  |   '  '--'\|  | |  ||  | |  |.-'    | 
+`--'   `--' `--'`-----'   `--'    `-----'`--' `--'`--' `--'`-----'                                                                  
+
+FAST Convergent Amino Acid Substitution identification tool
+
+Authors:    Fabio Barteri (fabio.barteri@upf.edu),
+            Xavier Farré (xfarrer@igtp.cat),
+            David de Juan (david.juan@upf.edu).
+
+MODULE NAME: PIPELINE MANAGER SCRIPT
+DESCRIPTION: Accepts the run inputs, lauches the discovery phase and the bootstrap on one or more alignments
+DEPENDENCIES: disco.py, init_bootstrap.py, boot.py 
+'''
+
+### Introduction
+# A convergent amino acid substitution or CAAS is an aminoacid change that co-segregate with
+# a specific trait.
+# Fastcaas is a tool to identify convergent amino acid substitutions from multiple sequence
+# alignments (MSA) of orthologous proteins.  
+
+### Options and documentation
+
+program_info = '''
+FAST CAAS v. 0.7 (beta)                    
+FAST Convergent Amino Acid Substitution detection tool
+'''
+
+import sys,os,glob
+from optparse import OptionParser
+from boot import *
+from disco import *
+from init_bootstrap import *
+from collect import *
+
+
+#### SETTINGS #########################################################################################################
+########################################################################################################################
+
+# Option parser
+
+parser = OptionParser()
+
+#   INPUTS
+
+#   Input alignment
+parser.add_option("-a", "--alignment", dest="single_alignment",
+                  help="Run fastcaas on a single alignment.", default = "none")
+#   Alignment format
+parser.add_option("--fmt", dest="ali_format",
+                  help="File format of the alignment (accepted formats in documentation). Default: fasta. Accepted: clustal, emboss, fasta, \
+                  fasta-m10, ig, maf, mauve, msf, nexus, phylip, phylip-sequential, phylip-relaxed, stockholm.", default = "phylip-relaxed")
+#   Config file
+parser.add_option("-t", "--traitfile", dest="config_file",
+                  help="The config file (read documentation). (-c/--config $path_to_config_file", default = "none")
+
+#   Species
+parser.add_option("--species", dest="species_file",
+                  help="A tabbed file with the species... will change this into the damn tree.", default = "none")
+
+#   Phylogeny (phylogenetic tree for permulations)
+parser.add_option("--phylogeny", dest="phylogeny_file",
+                  help="The tree of species in newick format. Needed for permulations", default = "none")
+
+#   trait values (trait values for permulations)
+parser.add_option("--traitvals", dest="traitvals",
+                  help="The tree of species in newick format.", default = "none")
+
+
+#   BOOTSTRAP
+
+# Which virtualization strategy
+parser.add_option("--bootstrap", dest="bootstrap_mode",
+                  help="Virtualization strategy. 'random', 'phylogeny-guided' or 'permulations', In case of permulations, please provide the phylogenetic tree and the ", default = "random")
+
+# How many bootstrap cycles
+parser.add_option("--cycles", dest="cycles",
+                  help="number of cycles", default = "1000")
+
+# Selection criteria for permulated species (applies to --bootstrap=permulations only)
+parser.add_option("--permulation_mode", dest="permode",
+                  help="permulation species selection mode (random, inner, edge)", default = "random")
+
+
+#   FILTERING
+
+#       A. limit output to scenario (default: all scenarios)
+
+# Which scenarios to be included
+parser.add_option("--scenarios", dest="scenarios_string",
+                  help="Limit the result to some scenarios. Scenarios are indicated with numbers from 1 to 4 and must \
+                      be provided as comma separated (e.g.: -s 1,2,3). See documentation for more details on the scenarios", default = "1,2,3")
+
+#       B. filter per gaps 
+
+# Max background gaps
+parser.add_option("--max_bg_gaps", dest="max_bg_gaps_string",
+                  help="Filter by number of gaps in the background\
+                      e.g. --max_bg_gaps 3 will accept positions with less than 3 gaps in bg. Default = 0 (no gaps accepted).", default = "nofilter")
+
+# Max foreground gaps
+parser.add_option("--max_fg_gaps", dest="max_fg_gaps_string",
+                  help="Filter by number of gaps in the foreground.\
+                      e.g. --max_bg_gaps 3 will accept positions with less than 3 gaps in fg. Default = 0 (no gaps accepted).", default = "nofilter")
+
+# Max overall gaps (fg + bg)
+parser.add_option("--max_gaps", dest="max_gaps_string",
+                  help="Filter by number of gaps in foreground and background.\
+                      e.g. --max_bg_gaps 3 will accept positions with less than 3 gaps in fg and bg. Default = 0 (no gaps accepted).", default = "nofilter")
+
+# Max gaps per position
+parser.add_option("--max_gaps_per_position", dest="max_gaps_pos_string",
+                  help="Max gap ratio admitted in a single alignment position.", default = "0.5")
+
+#       C. filter for missing species
+
+# Max background missings
+parser.add_option("--max_bg_miss", dest="max_bg_miss_string",
+                  help="Filter by number of miss in the background\
+                      e.g. --max_bg_miss 3 will accept positions with less than 3 miss in bg. Default = 0 (no miss accepted).", default = "nofilter")
+
+# Max foreground miss
+parser.add_option("--max_fg_miss", dest="max_fg_miss_string",
+                  help="Filter by number of miss in the foreground.\
+                      e.g. --max_bg_miss 3 will accept positions with less than 3 miss in fg. Default = 0 (no miss accepted).", default = "nofilter")
+
+# Max overall miss (fg + bg)
+parser.add_option("--max_miss", dest="max_miss_string",
+                  help="Filter by number of miss in foreground and background.\
+                      e.g. --max_bg_miss 3 will accept positions with less than 3 miss in fg and bg. Default = 0 (no miss accepted).", default = "nofilter")
+
+
+#   OUTPUT
+
+parser.add_option("-j", dest="output_prefix",
+                  help="The output folder prefix.", default = "none")
+
+
+parser.add_option("--maxpval", dest="max_pvalue",
+                  help="Filters the results per pvalue. Default 0.05.", default = "0.05")
+
+
+parser.usage = '''
+\n[INITIALIZATION MODE]
+fastcaas init -a $input_alignment -t $trait_file --species $species_table -j $jobname\n
+\n[RUN MODE]
+fastcaas run -a $input_alignment -t $trait_file --species $species_table -j $jobname\n
+[COLLATE MODE]
+fastcaas collate -j $jobname'''
+
+
+(options, args) = parser.parse_args()
+
+
+#### FUNCTIONS #########################################################################################################
+########################################################################################################################
+
+
+### CORE FUNCTIONS
+
+### Function runslice (collects the )
+def runslice(the_alignment, options_object):
+
+    # Inputs (transferring parsed options_object to variables)
+    alignment_format = options_object.ali_format
+
+    # Alignment slice: 1- Calculate column treshold
+
+    with open(options.config_file) as cfg_handle:
+        cfg_list = cfg_handle.read().splitlines()
+    
+    values = []
+
+    for x in cfg_list:
+        try:
+            c = x.split("\t")
+            values.append(c[1])
+        except:
+            pass
+    
+    fg_species = values.count("1")
+    bg_species = values.count("0")
+
+
+    # Alignment slicing: sum the null values (allowed_gaps + allowed_missing_species)
+
+    sum_nulls_fg = 0
+
+    for x in (options.max_fg_gaps_string,options.max_fg_miss_string):
+        try:
+            sum_nulls_fg = sum_nulls_fg + int(x)
+        except:
+            pass
+
+    sum_nulls_bg = 0
+
+    for x in (options.max_bg_gaps_string,options.max_bg_miss_string):
+        try:
+            sum_nulls_bg = sum_nulls_bg + int(x)
+        except:
+            pass
+
+
+
+    fg_threshold = fg_species - sum_nulls_fg
+    bg_threshold = bg_species - sum_nulls_bg
+
+
+    c_threshold = max(fg_threshold, bg_threshold)
+
+
+    # Alignment slice: 2- Filter positions (slice alignment)
+
+    out = slice(the_alignment, alignment_format = alignment_format, column_threshold = c_threshold, max_gaps = float(options.max_gaps_pos_string))
+
+    return out
+
+
+def fastcaas_core(options_object, sliced_alignment, alignment_format, bootstrap_object, output_bootstrap, output_single_run = "none"):
+
+    # Filtering settings (transferring parsed options_object to variables)
+
+    ud_admitted_scenarios = options_object.scenarios_string.split(",")
+
+    user_def_max_bg_gaps = options_object.max_bg_gaps_string
+    user_def_max_fg_gaps = options_object.max_fg_gaps_string
+    user_def_max_gaps = options_object.max_gaps_string
+
+    user_def_max_fg_miss = options_object.max_fg_miss_string
+    user_def_max_bg_miss = options_object.max_bg_miss_string
+    user_def_max_miss = options_object.max_miss_string
+
+    pp = sliced_alignment
+
+    # Step 1: bootstrap
+
+    boot_on_single_alignment(
+                    trait_config_file= options_object.config_file,
+                    simulated_traits= bootstrap_object,
+                    sliced_object = pp,
+                    max_fg_gaps = user_def_max_fg_gaps,
+                    max_bg_gaps = user_def_max_bg_gaps,
+                    max_overall_gaps = user_def_max_gaps,
+                    
+                    max_fg_miss = user_def_max_fg_miss,
+                    max_bg_miss = user_def_max_bg_miss,
+                    max_overall_miss = user_def_max_miss,
+
+                    the_admitted_scenarios = ud_admitted_scenarios,
+                    output_file = output_bootstrap
+                    )
+
+    # Step 2: import the pvalue dictionary
+
+    pval_dictionary = pval(output_bootstrap)
+
+    # Step 3: discovery phase
+    discovery( 
+                    input_cfg = options_object.config_file,
+                    sliced_object = pp,
+                    pvalue_dictionary = pval_dictionary,
+                    max_fg_gaps = user_def_max_fg_gaps,
+                    max_bg_gaps = user_def_max_bg_gaps,
+                    max_overall_gaps = user_def_max_gaps,
+
+                    max_fg_miss = user_def_max_fg_miss,
+                    max_bg_miss = user_def_max_bg_miss,
+                    max_overall_miss = user_def_max_miss,
+
+                    admitted_scenarios = ud_admitted_scenarios,
+                    output_file = output_single_run)
+
+
+    return 0
+
+#### MODE SELECTION ####################################################################################################
+########################################################################################################################
+
+if len(sys.argv) == 1:                                                  #@@ Check: are there options?
+    print(program_info)
+    parser.print_help()
+    exit()
+
+mode = sys.argv[1]
+
+if mode.lower() not in ("init", "run", "collate"):                      #@@ Check: correct mode declaration?
+    print(program_info)
+    parser.print_help()
+    print("\n\n****ERROR: please select a modality among init, run and collate\n\n")
+    exit()
+
+
+
+#### MODE 1. INIT ######################################################################################################
+########################################################################################################################
+
+if mode.lower() == "init":
+
+    # 1.1 Check the options
+    if options.output_prefix == "none":                                 #@@ Check: did the user provide a jobname?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: please provide a job name (-j $jobname)****\n\n")
+        exit()
+    
+    if options.species_file == "none":                                  #@@ Check: did the user provide a species file?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: no species vs families file provided****\n\n")
+        exit()
+
+    if options.traitvals == "none":                                  #@@ Check: did the user provide a species file?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: no species vs phenotypes file provided****\n\n")
+        exit()
+
+
+    # 1.2 Folder creation 
+    output_folder = options.output_prefix
+    reults_per_alignment_folder = output_folder +"/results_per_alignment"
+
+    try:
+        os.mkdir(output_folder)
+        os.mkdir(reults_per_alignment_folder)
+    except:
+        os.system("rm -r " + output_folder)
+        os.mkdir(output_folder)
+        os.mkdir(reults_per_alignment_folder)
+        pass
+
+    # 1.3 Trait simulation
+    # Import the options
+    traitfile = options.config_file
+    speciesfile = options.species_file
+    bootstrapmode = options.bootstrap_mode
+    number_of_cycles = int(options.cycles)
+
+    simulated_traits_file = output_folder + "/simulated_traits.tab"
+
+    print("Elaborating simulated traits from", traitfile, "Saving resume in",  simulated_traits_file)
+
+    simtrait_obj = simtrait(trait_config_file = traitfile,
+                            species_file = speciesfile,
+                            mode = bootstrapmode,
+                            cycles = number_of_cycles,
+                            traits_outfile= simulated_traits_file,
+                            tree_file = options.phylogeny_file,
+                            phenotype_values_file = options.traitvals,
+                            permulation_selection_strategy = options.permode)
+
+    # Export the traits in the trait resume file
+
+    if bootstrapmode != "permulations":
+        simtrait_obj.print_traits(simulated_traits_file)
+
+
+
+#### MODE 2. RUN #######################################################################################################
+########################################################################################################################
+
+if mode.lower() == "run":
+
+    # 2.1 Options check
+
+    if options.output_prefix == "none":                                 #@@ Check: did the user provide a jobname?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: please provide a job name (-j $jobname)****\n\n")
+        exit()
+
+    if options.single_alignment == "none":                              #@@ Check: did the user provide an alignment?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: no input alignment(s) provided****\n\n")
+        exit()
+
+    if options.config_file == "none":                                   #@@ Check: did the user provide a config file?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: no config file provided****\n\n")
+        exit()
+
+    # 2.2 Options import
+
+    output_folder = options.output_prefix
+    reults_per_alignment_folder = output_folder +"/results_per_alignment"
+
+    # 2.2 Read the bootstrap obhect
+
+    simulated_traits_file = output_folder + "/simulated_traits.tab"
+
+    if exists(simulated_traits_file):
+        simtrait_obj = simtrait_revive(simulated_traits_file)
+        print("Reading simulated traits from", simulated_traits_file)
+
+    else:
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: simulated traits not found. Please check the folder provided in the -j option****\n\n")
+        exit()
+    
+    # 2.3 Run the discovery and the bootstrap
+
+    alignment_name = options.single_alignment.split("/")[-1]
+    bootstrap_output = reults_per_alignment_folder + "/" + alignment_name + ".boot"
+    discovery_output = reults_per_alignment_folder + "/" + alignment_name + ".caas"
+
+    print("Processing", alignment_name)
+
+    # Part 1: Control the sliced alignment
+
+    ali_obj = runslice(options.single_alignment, options)
+
+    if len(ali_obj.d) < 1:
+        print("No variable positions found in", alignment_name + ". Please, revise gaps filtering criteria or FG and BG size")
+        exit()
+
+    # Part 2: the core function
+
+    fastcaas_core(  options_object = options,
+                    sliced_alignment = ali_obj,
+                    alignment_format = options.ali_format,
+                    bootstrap_object = simtrait_obj,
+                    output_bootstrap = bootstrap_output,
+                    output_single_run = discovery_output)
+
+
+
+#### MODE 3. COLLATE ###################################################################################################
+########################################################################################################################
+
+
+if mode.lower() == "collate":
+
+    # 3.1 Options check
+
+    if options.output_prefix == "none":                                 #@@ Check: did the user provide a jobname?
+        print(program_info)
+        parser.print_help()
+        print("\n\n****ERROR: please provide a job name (-j $jobname)****\n\n")
+        exit()
+    
+    # 3.2 Folder recognition
+
+    working_folder = options.output_prefix
+    reults_per_alignment_folder = working_folder +"/results_per_alignment"
+    
+    # 3.3 File collection
+    alldiscovery = glob.glob(reults_per_alignment_folder + "/*.caas".replace("//", "/"))
+    allbootstraps = glob.glob(reults_per_alignment_folder + "/*.boot".replace("//", "/"))
+
+    # 3.4 Results collation
+
+    print("Collecting all results... ",)
+    filter_multiple_results(reults_per_alignment_folder, 1.0 , output_file=working_folder + "/all.results.tab")
+    print("Done.")
+
+    print("Collecting significant results... ",)
+    filter_multiple_results(reults_per_alignment_folder, float(options.max_pvalue), output_file=working_folder + "/sig_" + options.max_pvalue + ".results.tab")
+    print("Done.")
+
+    print("Computing bootstrap distribution... ",)
+    merge_bootstrap(working_folder, float(options.max_pvalue))
+    print("Done.")
+    exit()
+
+exit()

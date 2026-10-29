@@ -1,0 +1,9 @@
+Sapajus_apella	0
+Mandrillus_sphinx	0
+Papio_hamadryas	0
+Theropithecus_gelada	0
+Macaca_arctoides	0
+Chlorocebus_pygerythrus	0
+Colobus_guereza	1
+Semnopithecus_vetulus	1
+Nomascus_concolor	1

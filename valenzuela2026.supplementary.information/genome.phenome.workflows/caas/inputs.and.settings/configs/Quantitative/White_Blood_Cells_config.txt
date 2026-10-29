@@ -1,0 +1,6 @@
+Loris_tardigradus	0
+Nycticebus_pygmaeus	1
+Pan_paniscus	1
+Pan_troglodytes	1
+Pongo_pygmaeus	1
+Homo_sapiens	0

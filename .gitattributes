@@ -1,8 +1,8 @@
 genome.phenome.maps/ALL_RER_CONVERGE_UNIQUE_MAR23.txt filter=lfs diff=lfs merge=lfs -text
 genome.phenome.maps/CAAS_FINAL_MAR23.tab filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/SUPP/S36/PHYLOP_files/all_phyloP/ALL_CDS_PHYLOP_shuff1.out filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/MAIN/InputFiles/CAAS_FINAL_MAR23.tab filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/MAIN/InputFiles/ALL_BM_OCT23_BETAS.txt filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/MAIN/InputFiles/ALL_LAMBDA_OCT23_BETAS.txt filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/MAIN/InputFiles/ALL_RER_CONVERGE_UNIQUE_MAR23.txt filter=lfs diff=lfs merge=lfs -text
-valenzuela2026.supplementary.information/workflow/SUPP/S34/ALL_MAMMALIAN_INFO_MAY23_FILTTOT.txt filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/SUPP/S36/PHYLOP_files/all_phyloP/ALL_CDS_PHYLOP_shuff1.out filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/MAIN/InputFiles/CAAS_FINAL_MAR23.tab filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/MAIN/InputFiles/ALL_BM_OCT23_BETAS.txt filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/MAIN/InputFiles/ALL_LAMBDA_OCT23_BETAS.txt filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/MAIN/InputFiles/ALL_RER_CONVERGE_UNIQUE_MAR23.txt filter=lfs diff=lfs merge=lfs -text
+valenzuela2026.supplementary.information/figure.creation/SUPP/S34/ALL_MAMMALIAN_INFO_MAY23_FILTTOT.txt filter=lfs diff=lfs merge=lfs -text

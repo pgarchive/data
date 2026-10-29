@@ -1,0 +1,10 @@
+Galago_moholi	1
+Gorilla_gorilla	0
+Macaca_fascicularis	0
+Macaca_mulatta	0
+Macaca_nemestrina	0
+Macaca_nigra	1
+Pan_paniscus	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Homo_sapiens	0

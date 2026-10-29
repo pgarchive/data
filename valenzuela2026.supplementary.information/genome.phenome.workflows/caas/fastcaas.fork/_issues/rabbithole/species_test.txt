@@ -1,0 +1,8 @@
+Gorilla_gorilla
+Macaca_arctoides
+Mirza_zaza
+Propithecus_coquereli
+Propithecus_tattersalli
+Saimiri_sciureus
+Varecia_rubra
+Homo_sapiens

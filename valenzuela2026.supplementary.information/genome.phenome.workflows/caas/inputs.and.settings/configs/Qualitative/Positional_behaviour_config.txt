@@ -1,0 +1,12 @@
+Alouatta_palliata	0
+Alouatta_seniculus	0
+Ateles_belzebuth	0
+Ateles_geoffroyi	0
+Ateles_paniscus	0
+Cacajao_calvus	1
+Cacajao_melanocephalus	1
+Chiropotes_albinasus	0
+Lagothrix_lagotricha	1
+Plecturocebus_cupreus	0
+Plecturocebus_hoffmansi	0
+Plecturocebus_moloch	0

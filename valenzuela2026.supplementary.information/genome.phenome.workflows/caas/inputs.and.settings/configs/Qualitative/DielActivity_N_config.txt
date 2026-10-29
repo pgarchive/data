@@ -1,0 +1,14 @@
+Aotus_azarae	0
+Aotus_griseimembra	1
+Aotus_trivirgatus	1
+Aotus_vociferans	1
+Avahi_laniger	1
+Avahi_peyrierasi	1
+Indri_indri	0
+Propithecus_coquereli	0
+Propithecus_coronatus	0
+Propithecus_diadema	0
+Propithecus_edwardsi	0
+Propithecus_perrieri	0
+Propithecus_tattersalli	0
+Propithecus_verreauxi	0

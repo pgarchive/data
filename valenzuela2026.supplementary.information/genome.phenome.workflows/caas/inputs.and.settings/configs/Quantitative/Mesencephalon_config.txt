@@ -1,0 +1,7 @@
+Gorilla_gorilla	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Varecia_variegata	1
+Galago_senegalensis	1
+Otolemur_crassicaudatus	1
+Galagoides_demidovii	0

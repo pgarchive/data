@@ -1,0 +1,7 @@
+Cacajao_melanocephalus	1
+Cacajao_calvus	1
+Plecturocebus_cupreus	0
+Homo_sapiens	0
+Pan_troglodytes	1
+Pongo_abelii	1
+Pongo_pygmaeus	1

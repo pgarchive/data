@@ -1,0 +1,9 @@
+Callithrix_jacchus	1
+Cebuella_pygmaea	0
+Mandrillus_sphinx	0
+Theropithecus_gelada	1
+Macaca_arctoides	0
+Macaca_nigra	0
+Chlorocebus_pygerythrus	1
+Colobus_guereza	0
+Semnopithecus_vetulus	0

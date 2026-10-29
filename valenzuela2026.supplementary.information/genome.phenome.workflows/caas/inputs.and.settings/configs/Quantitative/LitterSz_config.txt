@@ -1,0 +1,7 @@
+Arctocebus_calabarensis	0
+Eulemur_coronatus	1
+Eulemur_rubriventer	0
+Hapalemur_griseus	1
+Nycticebus_pygmaeus	1
+Prolemur_simus	0
+Varecia_variegata	1

@@ -1,0 +1,9 @@
+Arctocebus_calabarensis	0
+Cheirogaleus_major	0
+Cheirogaleus_medius	0
+Loris_lydekkerianus	1
+Loris_tardigradus	0
+Microcebus_murinus	1
+Nycticebus_coucang	0
+Nycticebus_pygmaeus	0
+Perodicticus_potto	0

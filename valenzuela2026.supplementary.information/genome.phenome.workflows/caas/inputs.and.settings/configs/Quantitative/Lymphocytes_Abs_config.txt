@@ -1,0 +1,6 @@
+Loris_tardigradus	0
+Macaca_arctoides	1
+Macaca_mulatta	0
+Macaca_nemestrina	0
+Macaca_nigra	0
+Nycticebus_pygmaeus	1

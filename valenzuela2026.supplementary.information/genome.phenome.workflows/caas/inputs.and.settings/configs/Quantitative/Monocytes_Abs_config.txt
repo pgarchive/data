@@ -1,0 +1,6 @@
+Callithrix_jacchus	0
+Leontopithecus_chrysomelas	0
+Macaca_arctoides	0
+Macaca_mulatta	0
+Macaca_nigra	1
+Saguinus_oedipus	1

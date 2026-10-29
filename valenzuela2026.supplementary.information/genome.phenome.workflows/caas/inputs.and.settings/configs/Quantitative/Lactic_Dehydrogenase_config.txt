@@ -1,0 +1,8 @@
+Eulemur_flavifrons	0
+Eulemur_rubriventer	1
+Gorilla_gorilla	0
+Mirza_zaza	1
+Pan_paniscus	0
+Pan_troglodytes	0
+Pongo_pygmaeus	0
+Homo_sapiens	0

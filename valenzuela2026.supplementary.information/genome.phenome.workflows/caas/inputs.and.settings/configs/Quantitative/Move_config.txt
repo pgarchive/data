@@ -1,0 +1,13 @@
+Alouatta_belzebul	0
+Alouatta_caraya	0
+Alouatta_palliata	0
+Alouatta_seniculus	0
+Cercopithecus_ascanius	0
+Cercopithecus_mitis	0
+Lagothrix_lagotricha	1
+Macaca_fascicularis	1
+Macaca_fuscata	0
+Macaca_mulatta	0
+Semnopithecus_entellus	0
+Theropithecus_gelada	0
+Trachypithecus_auratus	0
