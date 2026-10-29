@@ -1,6 +1,6 @@
-# Code and data guide
+### [The Primate Genome-Phenome Archive](../) / valenzuela2026.supplementary.information
 
-## Primate Genome-phenome Archive: supplementary datasets, figure workflows and genome–phenome analyses
+# Code and data guide
 
 This guide accompanies the materials in `valenzuela2026.supplementary.information/`. It describes the supplementary datasets, the organization of the figure-analysis scripts, the archived settings for CAAS and RERconverge analyses, and the current limitations affecting execution. Paths in this guide are relative to `valenzuela2026.supplementary.information/` unless stated otherwise. This document describes the files available at preparation time; it does not certify that all manuscript figures have been regenerated.
 
