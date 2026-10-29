@@ -1,4 +1,4 @@
-## The Primate Genome-Phenome Archive (https://pgarchive.github.io/) 
+## The Primate Genome-Phenome Archive (https://drive.google.com/drive/folders/1mprhR0bt___WG0Ue0Lh7B7Fyxf6qPZXF?usp=sharing) 
 # One to One Ortholog CDS Alignments
 
 **Version: 1.0**
