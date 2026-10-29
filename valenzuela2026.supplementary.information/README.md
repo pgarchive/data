@@ -10,7 +10,7 @@ The supplementary materials comprise three datasets, the associated figure-analy
 
 Main-figure scripts are located in `figure.creation/MAIN/Scripts/`. Individual supplementary-figure scripts are located in `figure.creation/SUPP/S1/` through `S50/`; the S11 directory is named `s11` with a lowercase s. Six additional scripts are stored in `figure.creation/SUPP/S6,9,12,15,18,21_MERGED/`. Script filenames identify the associated figures or panels, while their contents document data loading, filtering, joins, statistical calculations and plotting choices.
 
-The supplied collection retains some paths from the original analysis environment and seven scripts with syntax errors. These limitations are documented in Sections 4 and 5. The final inventory records the relative path, MD5 checksum and a brief description of every file under `supplementary.tables/` and `figure.creation/`.
+The supplied collection retains some paths from the original analysis environment, as documented in Section 4. The final inventory records the relative path, MD5 checksum and a brief description of every file under `supplementary.tables/` and `figure.creation/`.
 
 ## 2. Supplementary datasets
 
@@ -88,22 +88,7 @@ These observations concern the supplied `supplementary.tables/` and `figure.crea
 
 Execution requires R and the packages loaded by each selected script. Examples include ggplot2, dplyr, tidyr, ape, phytools, ComplexHeatmap, FactoMineR, ggtree and WebGestaltR. This is not a complete installation list. Some scripts include package-installation or external-service calls; inspect these before running them. The supplied workflow does not include a dependency lockfile or a validated environment specification. Package versions and full end-to-end figure regeneration have not been validated in this review.
 
-## 5. Warning: retained syntax errors in seven scripts
-
-**Seven scripts contain paired triple double-quote delimiters (`"""`). These delimiters are not valid R block comments. They cause parsing errors and prevent the complete file from being executed with `Rscript` or `source()`. The problem does not merely deactivate the enclosed code.**
-
-The affected files and delimiter lines are:
-
-- `figure.creation/MAIN/Scripts/Fig5C.R`: lines 217 and 373, around additional selection/CAAS overlap analyses.
-- `figure.creation/SUPP/S15/FigS15.R`: lines 823 and 834, around assignments of redundant-trait groups.
-- In `figure.creation/SUPP/S6,9,12,15,18,21_MERGED/`, `S6_MERGED.R`, `S12_MERGED.R`, `S15_MERGED.R` and `S18_MERGED.R`: lines 263 and 274, around a `TestCor` / `ApplyFdrCor()` block.
-- In the same directory, `S9_MERGED.R`: lines 262 and 273, around the corresponding `TestCor` block. `S21_MERGED.R` is not among the seven files with this error.
-
-These delimiters have been retained because it is not established whether the enclosed code was intended to run. Removing only the delimiters would activate the enclosed analyses; commenting every line of the block would leave it inactive. Neither interpretation has been adopted in the supplied seven files. Readers can inspect the code, but execution requires clarification and an explicit correction.
-
-A separate trailing `+` after `saveRDS(p2, "FigureS26")` was removed from `figure.creation/SUPP/S26/FigS26.R`. That script now passes R's syntax parser. A fresh syntax check of all 69 files found 62 that parse and the seven failures listed above. Passing the parser does not establish that inputs, packages, object definitions or scientific results are correct. No other script corrections are represented by this guide.
-
-## 6. Integrity checks and scope of the inventory
+## 5. Integrity checks and scope of the inventory
 
 The inventory below lists every regular file recursively under `supplementary.tables/` and `figure.creation/`, including auxiliary inputs and all original/exported workbook pairs. It contains 356 entries: six table files and 350 workflow files. This README and `genome.phenome.workflows/` are outside those two directories and are excluded from this inventory, avoiding a self-referential checksum for the README. The inventory retains the checksums from the original review; updating directory names does not revalidate file contents.
 
@@ -117,7 +102,7 @@ md5sum "supplementary.tables/Data_S1.ods"
 
 On macOS, the corresponding command is `md5 "supplementary.tables/Data_S1.ods"`.
 
-## 7. File inventory: supplementary tables and figure workflows
+## 6. File inventory: supplementary tables and figure workflows
 
 Entries are grouped by directory and sorted by relative path. Each entry gives the exact filename, its MD5 digest and a short description.
 
