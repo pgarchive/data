@@ -1,4 +1,4 @@
-## The Primate Genome-Phenome Archive (https://drive.google.com/drive/folders/1mprhR0bt___WG0Ue0Lh7B7Fyxf6qPZXF?usp=sharing) 
+## The Primate Genome-Phenome Archive
 # One to One Ortholog CDS Alignments
 
 **Version: 1.0**
@@ -10,7 +10,7 @@ This collection contains nucleotide and protein alignments of primate one-to-one
 ## Access version 1.0
 
 **Dataset identifier:** `PGA-1to1-v1.0`  
-**Download location (Google Drive):** [https://drive.google.com/drive/folders/133KVnaXhKX-0zJQYcPrmJ-8JrQR7T9DM?usp=sharing](https://drive.google.com/drive/folders/133KVnaXhKX-0zJQYcPrmJ-8JrQR7T9DM?usp=sharing)
+**Download location (Google Drive):** [https://drive.google.com/drive/folders/1mprhR0bt___WG0Ue0Lh7B7Fyxf6qPZXF?usp=sharing](https://drive.google.com/drive/folders/1mprhR0bt___WG0Ue0Lh7B7Fyxf6qPZXF?usp=sharing)
 
 
 Version 1.0 is packaged in two alternative formats:
