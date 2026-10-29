@@ -53,4 +53,4 @@ See the [LICENSE](LICENSE) file for details.
 
 ## Supplementary materials
 
-The [supplementary materials](supplementary.information/) contain the supplementary datasets and figure-analysis scripts. Details on file organization, available datasets, execution limitations, and the complete file inventory with MD5 checksums are provided in the code and data guide ([Markdown](supplementary.information/code.and.data.guide.md) | [PDF](supplementary.information/code.and.data.guide.pdf)).
+The [supplementary materials](valenzuela2026.supplementary.information/) contain the supplementary datasets and figure-analysis scripts. Details on file organization, available datasets, execution limitations, and the complete file inventory with MD5 checksums are provided in the code and data guide ([Markdown](valenzuela2026.supplementary.information/code.and.data.guide.md) | [PDF](valenzuela2026.supplementary.information/code.and.data.guide.pdf)).

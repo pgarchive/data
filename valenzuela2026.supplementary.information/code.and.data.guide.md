@@ -2,7 +2,7 @@
 
 ## Primate Genome-phenome Archive: supplementary datasets and figure workflows
 
-This guide accompanies the materials in `supplementary.information/`. It describes the supplementary datasets, the organization of the figure-analysis scripts and the current limitations affecting execution. Paths in this guide are relative to `supplementary.information/` unless stated otherwise. This document describes the files available at preparation time; it does not certify that all manuscript figures have been regenerated.
+This guide accompanies the materials in `valenzuela2026.supplementary.information/`. It describes the supplementary datasets, the organization of the figure-analysis scripts and the current limitations affecting execution. Paths in this guide are relative to `valenzuela2026.supplementary.information/` unless stated otherwise. This document describes the files available at preparation time; it does not certify that all manuscript figures have been regenerated.
 
 ## 1. Overview
 
@@ -40,7 +40,7 @@ The main shared input directory is `workflow/MAIN/InputFiles/`. Inputs are also 
 
 Plain-text inputs use extensions such as `.txt`, `.tsv`, `.tab` and `.out`; some text tables have no extension. Inspect the script's separator and header arguments before importing a table: extensions alone do not establish whether a header is present. Newick files contain phylogenetic trees. Files read with `readRDS()` are serialized R objects, including plotting objects and color palettes. Several have a `.gz` suffix. Do not interpret every `.gz` file as a compressed text table; follow the reader used in the corresponding script.
 
-For example, the available trait palette can be inspected in R from the repository root with `readRDS("supplementary.information/workflow/MAIN/InputFiles/traits_palette.gz")`. Loading an object does not run the associated analysis or produce a figure.
+For example, the available trait palette can be inspected in R from the repository root with `readRDS("valenzuela2026.supplementary.information/workflow/MAIN/InputFiles/traits_palette.gz")`. Loading an object does not run the associated analysis or produce a figure.
 
 Many scripts save R objects through `saveRDS()` rather than exporting a final image. Such objects are outputs, even where the filename has no extension. Check the actual saving commands when evaluating what a script produces. Calls to `View()` are intended for interactive inspection and may require adjustment for non-interactive execution.
 
@@ -91,7 +91,7 @@ The inventory below lists every regular file recursively under `tables/` and `wo
 
 MD5 values were computed from each file's complete stored bytes, including the compression wrapper for `.gz` files. They identify this snapshot and can detect changed or incomplete downloads; they are not checksums of decompressed content. Editing a file, re-saving a workbook or recompressing an object can change its MD5 without necessarily changing the scientific data. Descriptions summarize the visible filename, file content or its use in the scripts; they do not substitute for a formal data dictionary or establish undocumented scenario meanings.
 
-To check an individual file, run the following from `supplementary.information/` and compare the returned digest with its inventory entry:
+To check an individual file, run the following from `valenzuela2026.supplementary.information/` and compare the returned digest with its inventory entry:
 
 ```bash
 md5sum "tables/Data_S1.ods"
